@@ -52,7 +52,7 @@ def main():
         prediction = predict_data(user_data)
         st.success(f"your predicion result is {prediction}")
         user_data['prediction']=round(float(prediction[0]),2)
-        #conert the data to the python compatible format of data type
+        #convert the data to the python compatible format of data type
         user_data={key:int(value) if isinstance(value,np.integer) else float(value) if isinstance(value, np.floating) else value for key,value in user_data.items()}
         collection.insert_one(user_data)
         
