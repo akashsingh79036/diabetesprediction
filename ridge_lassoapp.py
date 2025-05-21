@@ -17,7 +17,7 @@ db=client['diabetes'] # creating a database
 collection=db['diabetes_pred']
 
 def load_model():
-    with  open("diabetes_ridge&lasso_final_model.pkl",'rb') as file:
+    with  open("diabetes_ridge_lasso_final_model.pkl",'rb') as file:
         ridge_model,lasso_model,scaler=pickle.load(file)
     return ridge_model,lasso_model,scaler
 
